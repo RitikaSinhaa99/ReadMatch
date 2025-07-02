@@ -1,0 +1,139 @@
+/* General Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url('image.webp'); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-top: 60px; /* Space for the fixed header */
+}
+
+/* Header Styling */
+header {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark background to contrast with text */
+  color: #fdfdfb; /* Gold text for readability */
+  padding: 15px 30px; /* Adequate padding */
+  position: fixed; /* Makes the header fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensures the header stays on top of other elements */
+  text-align: right; /* Align the user info and logout link to the right */
+}
+
+header p {
+  margin: 0;
+  font-size: 1.1rem; /* Slightly larger font for user details */
+  font-weight: bold;
+}
+
+header a {
+  color: #f8f8f8; /* Gold color for the logout link */
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px; /* Space between user info and logout */
+}
+
+header a:hover {
+  text-decoration: underline; /* Add underline on hover for logout link */
+}
+
+/* Container Styling */
+.container {
+  max-width: 700px;
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+/* Heading */
+h1 {
+  font-family: 'Fiona', cursive; /* Add Fiona font here */
+  color: #a50000;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+}
+
+/* Form Label Styling */
+.form-label {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+  display: block;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Form Group Options */
+.form-options {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Radio Button Styling */
+input[type="radio"] {
+  display: none; /* Hide the default radio button */
+}
+
+input[type="radio"] + label {
+  background: #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #555;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+input[type="radio"]:checked + label {
+  background: #d9534f;
+  color: #fff;
+  border: 1px solid #d9534f;
+}
+
+/* Submit Button Styling */
+.submit-button {
+  display: block;
+  width: 100%;
+  background-color: #a50000;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #c9302c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.5rem;
+  }
+
+  .form-options {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  input[type="radio"] + label {
+      margin-bottom: 10px;
+      width: 100%;
+      text-align: center;
+  }
+}
